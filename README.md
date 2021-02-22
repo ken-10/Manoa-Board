@@ -15,13 +15,19 @@
 # Team members
 - Matthew Kim
   - New Completions
-    - Approved Tools section of the report (Completed)
+    - Approved Tools section of the report
   - Current
   - Next
 - Qiqing Luo
-  - Deprecated/Unsafe Functions section of the report (Completed)
+  - New Completions
+    - Deprecated/Unsafe Functions section of the report (Completed)
+  - Current
+  - Next
 - Jiaying Feng
-  - Static Analysis section of the report (Completed)
+  - Nef Completions
+    - SFunctions section of the report (Completed)
+  - Current
+  - Next
 - Ken Tung
   - Assignment 3 Tasks
   - Completed
