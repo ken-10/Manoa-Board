@@ -1,7 +1,7 @@
 # Manoa-Board
 
 # Completed
-- Create Navigation Bar
+- Created Navigation Bar
 - Mock up Profile Page
 
 # Pending
@@ -14,10 +14,15 @@
 
 # Team members
 - Matthew Kim
-  - Approved Tools section of the report
+  - New Completions
+    - Approved Tools section of the report (Completed)
+  - Current
+  - Next
 - Qiqing Luo
-  - Deprecated/Unsafe Functions sectino of the report
+  - Deprecated/Unsafe Functions section of the report (Completed)
 - Jiaying Feng
-  - Static Analysis section of the report
+  - Static Analysis section of the report (Completed)
 - Ken Tung
-  - Created navigation bar
+  - Assignment 3 Tasks
+  - Completed
+  - Mocked up navigation bar
