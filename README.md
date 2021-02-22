@@ -16,19 +16,21 @@
 - Matthew Kim
   - New Completions
     - Approved Tools section of the report
+    - Mocked
   - Current
   - Next
 - Qiqing Luo
   - New Completions
-    - Deprecated/Unsafe Functions section of the report (Completed)
+    - Deprecated/Unsafe Functions section of the report
   - Current
   - Next
 - Jiaying Feng
-  - Nef Completions
-    - SFunctions section of the report (Completed)
+  - New Completions
+    - Static Analysis section of the report
   - Current
   - Next
 - Ken Tung
-  - Assignment 3 Tasks
-  - Completed
-  - Mocked up navigation bar
+  - New Completions
+    - Created Navigation Bar
+  - Current
+  - Next
