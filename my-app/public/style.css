@@ -1,0 +1,46 @@
+.ui.borderless.topmenu.menu {
+  box-shadow: none;
+  border: none;
+  padding-bottom: -50px;
+}
+
+.ui.borderless.middlemenu.menu {
+  box-shadow: none;
+  border: none;
+
+}
+
+.header_bar {
+  min-height: 10px;
+  background: #006341;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+}
+
+.footer-background {
+  color: Black;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.ui.left.image {
+  vertical-align: baseline;
+  position: static;
+  padding: 0.2em;
+}
+
+.ui.borderless.downmenu.menu {
+  box-shadow: none;
+  border: none;
+}
+
+.mainPage {
+  background: url(https://manoa.hawaii.edu/admissions/virtual/downloads/UHMCampusCenter2.jpg) no-repeat center center;
+  background-size: cover;
+  height: 600px;
+}
+
+}
