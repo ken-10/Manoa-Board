@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d746151e-686d-4fb8-902f-99b3eedded65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/my-app/src/makePost.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/public/post/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/public/post/main.html" afterDir="false" />
     </list>
