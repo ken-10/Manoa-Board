@@ -32,5 +32,7 @@
 - Ken Tung
   - New Completions
     - Created Navigation Bar
+    - Implemented Authentication
   - Current
+    - Fix login and signout redirection
   - Next
