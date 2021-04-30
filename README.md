@@ -6,8 +6,6 @@
 
 # Pending
 - Set up basic web page structure
-- Create Landing Page
-- Create Login/Sign up Page
 - Create footer
 - Create dashboard
 - Finish profile page
@@ -33,6 +31,8 @@
   - New Completions
     - Created Navigation Bar
     - Implemented Authentication
+    - Application tracks authentication status
   - Current
-    - Fix login and signout redirection
+    - Create dashboard
+    - Create database to store user content
   - Next
