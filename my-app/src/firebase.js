@@ -13,6 +13,8 @@
   // Initialize Firebase
   const firebaseApp = firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
+  export const storage = firebase.storage().ref();
   const auth = firebase.auth();
+
   export {auth};
   export default db;

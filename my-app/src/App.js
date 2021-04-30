@@ -8,6 +8,7 @@ import { auth } from "./firebase";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap'
 import { useEffect, useState } from 'react';
+import FileUpload from './components/upload';
 
 
 function App() {
@@ -30,11 +31,16 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {/* nav bar*/}
+        {/*if user is logged in, show certain nav links */}
         {user ? <nav className="navbar navbar-expand-lg navbar-light fixed-top">
           <div className="container">
             <Link className="navbar-brand" to={"/"}>Manoa Board</Link>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link to={"/upload"} className="nav-link">Add Post</Link>
+                </li>
                 <li className="nav-item">
                   <Link onClick={() => auth.signOut()} className="nav-link" >Sign out</Link>
                 </li>
@@ -43,6 +49,7 @@ function App() {
           </div>
         </nav>
           :
+          // else no user logged in (so show sign in and up options)
           <nav className="navbar navbar-expand-lg navbar-light fixed-top">
             <div className="container">
               <Link className="navbar-brand" to={"/"}>Manoa Board</Link>
@@ -59,12 +66,18 @@ function App() {
             </div>
           </nav>
         }
+
+        {/* webpage body*/}
         <div className="outer">
           {user ?
+            // paths allowed when users are logged in
             <Switch>
               <Route exact path='/' component={Welcome} />
+              <Route path="/upload" component={FileUpload} />
+
             </Switch>
             :
+            //paths allowed when users are not logged in
             <Switch>
               <Route exact path='/' component={Login} />
               <Route path="/sign-in" component={Login} />
