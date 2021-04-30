@@ -4,17 +4,17 @@ import { auth } from "../firebase";
 const Login = () => {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
-    const signUp = e => {
-        e.preventDefault();
-        auth.createUserWithEmailAndPassword(
-            emailRef.current.value,
-            passwordRef.current.value
-        ).then(user => {
-            console.log(user)
-        }).catch(err => {
-            console.log(err)
-        })
-    }
+    // const signUp = e => {
+    //     e.preventDefault();
+    //     auth.createUserWithEmailAndPassword(
+    //         emailRef.current.value,
+    //         passwordRef.current.value
+    //     ).then(user => {
+    //         console.log(user)
+    //     }).catch(err => {
+    //         console.log(err)
+    //     })
+    // }
     const signIn = e => {
         e.preventDefault();
         auth.signInWithEmailAndPassword(
@@ -43,7 +43,7 @@ const Login = () => {
 
                 <button onClick={signIn} type="submit" className="btn btn-dark btn-lg btn-block">Sign in</button>
                 <p className="forgot text-right">
-                    Not yet registered? <a onClick={signUp} href="#">Sign up</a>
+                    Not yet registered? <a href="/sign-up">Sign up</a>
                 </p>
             </form>
         );

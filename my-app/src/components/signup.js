@@ -1,40 +1,52 @@
-import React, { Component } from "react";
+import React, {useRef} from "react";
+import { auth } from "../firebase";
 
-export default class SignUp extends Component {
-    render() {
+const Login = () => {
+    const emailRef = useRef(null);
+    const passwordRef = useRef(null);
+    const signUp = e => {
+        e.preventDefault();
+        auth.createUserWithEmailAndPassword(
+            emailRef.current.value,
+            passwordRef.current.value
+        ).then(user => {
+            console.log(user)
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+    // const signIn = e => {
+    //     e.preventDefault();
+    //     auth.signInWithEmailAndPassword(
+    //         emailRef.current.value,
+    //         passwordRef.current.value
+    //     ).then(user => {
+    //         console.log(user)
+    //     }).catch(err => {
+    //         console.log(err)
+    //     })
+    // }
         return (
             <form>
-                <h3>Register</h3>
-                <div className="form-group">
-                    <label>Username</label>
-                    <input type="text" className="form-control" placeholder="Username" />
-                </div>
 
-                <div className="form-group">
-                    <label>First name</label>
-                    <input type="text" className="form-control" placeholder="First name" />
-                </div>
-
-                <div className="form-group">
-                    <label>Last name</label>
-                    <input type="text" className="form-control" placeholder="Last name" />
-                </div>
+                <h3>Sign Up</h3>
 
                 <div className="form-group">
                     <label>Email</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
+                    <input ref={emailRef} type="email" className="form-control" placeholder="Enter email" />
                 </div>
 
                 <div className="form-group" style={{paddingBottom: "15px"}}>
                     <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
+                    <input ref={passwordRef} type="password" className="form-control" placeholder="Enter password" />
                 </div>
 
-                <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
+                <button onClick={signUp} type="submit" className="btn btn-dark btn-lg btn-block">Sign in</button>
                 <p className="forgot text-right">
-                    Already registered? <a href="#">Sign in</a>
+                    Already registered? <a href="/sign-in">Log in</a>
                 </p>
             </form>
         );
-    }
 }
+
+export default Login
