@@ -20,8 +20,9 @@ const Login = () => {
         auth.signInWithEmailAndPassword(
             emailRef.current.value,
             passwordRef.current.value
-        ).then(user => {
-            console.log(user)
+        ).then(userCredential => {
+            // console.log('user')
+            console.log(userCredential.user)
         }).catch(err => {
             console.log(err)
         })

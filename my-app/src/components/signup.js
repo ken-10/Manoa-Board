@@ -9,8 +9,8 @@ const Login = () => {
         auth.createUserWithEmailAndPassword(
             emailRef.current.value,
             passwordRef.current.value
-        ).then(user => {
-            console.log(user)
+        ).then(userCredential => {
+            console.log(userCredential.user)
         }).catch(err => {
             console.log(err)
         })
@@ -41,7 +41,7 @@ const Login = () => {
                     <input ref={passwordRef} type="password" className="form-control" placeholder="Enter password" />
                 </div>
 
-                <button onClick={signUp} type="submit" className="btn btn-dark btn-lg btn-block">Sign in</button>
+                <button onClick={signUp} type="submit" className="btn btn-dark btn-lg btn-block">Sign up</button>
                 <p className="forgot text-right">
                     Already registered? <a href="/sign-in">Log in</a>
                 </p>

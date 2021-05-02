@@ -8,35 +8,30 @@ const FileUpload = () => {
     const [progress, setProgress] = useState(0);
 
     const handleChange = e => {
-        if (e.target.files[0]) {
-            setImage(e.target.files[0]);
-        }
+      if (e.target.files[0]) {
+          setImage(e.target.files[0]);
+      }
     }
 
     const handleUpload = () => {
-        const uploadTask = storage.ref(`images/${image.name}`).put(image);
-        uploadTask.on(
-          "state_changed",
-          snapshot => {
-            const progress = Math.round(
-              (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-            );
-            setProgress(progress);
-          },
-          error => {
-            console.log(error);
-          },
-          () => {
-            storage
-              .ref("images")
-              .child(image.name)
-              .getDownloadURL()
-              .then(url => {
-                setUrl(url);
-              });
-          }
-        );
-      };
+      const uploadTask = storage.child(`images/${image.name}`).put(image);
+      uploadTask.on( "state_changed",
+        snapshot => {
+          const progress = Math.round(
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+          );
+          setProgress(progress);
+        },
+        error => {
+          console.log(error);
+        },
+        () => {
+          uploadTask.snapshot.ref.getDownloadURL().then(url => {
+            setUrl(url);
+          });
+        }
+      );
+    };
 
       console.log("image: ", image);
 
@@ -52,7 +47,7 @@ const FileUpload = () => {
             <br />
             {url}
             <br />
-            <img src={url || "http://via.placeholder.com/300"} alt="firebase-image" />
+            <img style={{maxWidth:300, maxHeight:300}} src={url || "http://via.placeholder.com/300"} alt="firebase-image" />
         </div>
     );
 }
