@@ -67,59 +67,81 @@ fileData = () => {
   );
   }
 };
+/**render() {
+    return (
+        class TopMenu extends React.Component {
+          render() {
+            return (
+                <Menu borderless className="topmenu">
+                  <Container>
+                    <Menu.Item position="right">
+                      <Dropdown item text="My Account">
+                        <Dropdown.Menu>
+                          <Dropdown.Item>Sign in</Dropdown.Item>
+                          <Dropdown.Item>Sign up</Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </Menu.Item>
+                  </Container>
+                </Menu>
+
+            )
+          }
+        }
+
+    class MiddleMenu extends React.Component {
+      render() {
+        return (
+            <Menu borderless className="middlemenu">
+              <Grid centered container>
+                <Menu.Item id="track2">Make a post</Menu.Item>
+                <div className="form-group">
+                  <label>What is in your mind?</label>
+                  <input type="caption" className="form-control" placeholder="Enter caption"/>
+                </div>
+
+                <div className="form-group" style={{ paddingBottom: "15px" }}>
+                  <label>Select pictures</label>
+                  <p>
+                    Click on the "Browse" button to browse for pictures:
+                  </p>
+                  <input type="file"
+                         style={{ color: 'gray', border: '1px solid gainsboro', borderRadius: '15px', padding: '15px' }}
+                         onChange={this.onFileChange}/>
+                  <br/><br/>
+                  <Button onClick={this.onFileUpload}>
+                    Upload
+                  </Button>
+                  {this.fileData()}
+                </div>
+              </Grid>
+            </Menu>
+        )
+      }
+    }
+  )
+
+}**/
 render() {
   return (
-      class TopMenu extends React.Component {
-        render() {
-          return (
-              <Menu borderless className="topmenu">
-                <Container>
-                  <Menu.Item position="right">
-                    <Dropdown item text="My Account">
-                      <Dropdown.Menu>
-                        <Dropdown.Item>Sign in</Dropdown.Item>
-                        <Dropdown.Item>Sign up</Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown>
-                  </Menu.Item>
-                </Container>
-              </Menu>
-
-          )
-        }
-      }
-
-  class MiddleMenu extends React.Component {
-    render() {
-      return (
-          <Menu borderless className="middlemenu">
-            <Grid centered container>
-              <Menu.Item id="track2">Make a post</Menu.Item>
-              <div className="form-group">
-                <label>What is in your mind?</label>
-                <input type="caption" className="form-control" placeholder="Enter caption"/>
-              </div>
-
-              <div className="form-group" style={{ paddingBottom: "15px" }}>
-                <label>Select pictures</label>
-                <p>
-                  Click on the "Browse" button to browse for pictures:
-                </p>
-                <input type="file"
-                       style={{ color: 'gray', border: '1px solid gainsboro', borderRadius: '15px', padding: '15px' }}
-                       onChange={this.onFileChange}/>
-                <br/><br/>
-                <Button onClick={this.onFileUpload}>
-                  Upload
-                </Button>
-                {this.fileData()}
-              </div>
-            </Grid>
-          </Menu>
-      )
-    }
-  }
-)
-
+      <Container textAlign='center'>
+        <Header textAlign='center' as='h2'></Header>
+        <br></br>
+        <p>
+          Make a post
+        </p>
+        <p>
+          What is in your mind?"
+          </p>
+        <input type="caption" className="form-control" placeholder="Enter caption"/>
+        <input type="file" style={{ color: 'gray', border: '1px solid gainsboro', borderRadius: '15px', padding: '15px' }} onChange={this.onFileChange} />
+        <br/><br/>
+        <Button onClick={this.onFileUpload}>
+          Upload
+        </Button>
+        {this.fileData()}
+      </Container>
+  );
 }
+
 }
