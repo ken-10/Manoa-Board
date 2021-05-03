@@ -8,11 +8,13 @@
     projectId: "manoa-board-15ff3",
     storageBucket: "manoa-board-15ff3.appspot.com",
     messagingSenderId: "218804848336",
-    appId: "1:218804848336:web:848f154679b2d20188c0d5"
+    appId: "1:218804848336:web:848f154679b2d20188c0d5",
+    databaseURL: "https://manoa-board-15ff3-default-rtdb.firebaseio.com/",
   };
   // Initialize Firebase
   const firebaseApp = firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
+  export const database = firebase.database();
   export const storage = firebase.storage().ref();
   const auth = firebase.auth();
 

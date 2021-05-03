@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { render } from "react-dom";
-import {storage} from "../firebase";
+import {storage, database} from "../firebase";
 
-const FileUpload = () => {
+const FileUpload = (props) => {
     const [image, setImage] = useState(null);
     const [url, setUrl] = useState("");
     const [progress, setProgress] = useState(0);
@@ -11,6 +10,35 @@ const FileUpload = () => {
       if (e.target.files[0]) {
           setImage(e.target.files[0]);
       }
+    }
+
+    function writeNewPost(uid, email, imageUrl) {
+      // A post entry.
+      var postData = {
+        authorEmail: email,
+        authorUid: uid,
+        // body: body,
+        // title: title,
+        image: imageUrl,
+        submittedDate: new Date(),
+      };
+    
+      // Get a key for a new Post.
+      var newPostKey = database.ref().child('posts').push().key;
+    
+      // Write the new post's data simultaneously in the posts list and the user's post list.
+      var updates = {};
+      updates['/posts/' + newPostKey] = postData;
+      // updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+    
+      return database.ref().update(updates,
+        (error) => {
+          if (error) {
+            console.log(error)
+          } else {
+            console.log(postData)
+          }
+      });
     }
 
     const handleUpload = () => {
@@ -27,13 +55,14 @@ const FileUpload = () => {
         },
         () => {
           uploadTask.snapshot.ref.getDownloadURL().then(url => {
+            writeNewPost(props.user.uid, props.user.email, url);
             setUrl(url);
           });
         }
       );
     };
 
-      console.log("image: ", image);
+    // console.log("image: ", image);
 
 
 

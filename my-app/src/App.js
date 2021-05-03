@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap'
 import { useEffect, useState } from 'react';
 import FileUpload from './components/upload';
+import Profile from './components/profile';
 
 
 function App() {
@@ -42,6 +43,9 @@ function App() {
                   <Link to={"/upload"} className="nav-link">Add Post</Link>
                 </li>
                 <li className="nav-item">
+                  <Link to={"/profile"} className="nav-link">Profile</Link>
+                </li>
+                <li className="nav-item">
                   <Link onClick={() => auth.signOut()} className="nav-link" >Sign out</Link>
                 </li>
               </ul>
@@ -73,8 +77,12 @@ function App() {
             // paths allowed when users are logged in
             <Switch>
               <Route exact path='/' component={Welcome} />
-              <Route path="/upload" component={FileUpload} />
-
+              <Route path="/upload" >
+                <FileUpload user={user}/>
+              </Route>
+              <Route path="/profile" >
+                <Profile user={user}/>
+              </Route>
             </Switch>
             :
             //paths allowed when users are not logged in
