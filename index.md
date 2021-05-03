@@ -27,11 +27,7 @@ Manoa Board is a photo sharing application inspired by Instagram for University 
 ![image](https://user-images.githubusercontent.com/46728332/116857146-0c9e1f00-ab98-11eb-87be-92bb864461ea.png)
 8. Lastly, users may sign out by click on the "Sign out" button in the navigation bar
 
-## Security & Disclaimer Notes
-When using this application, you agree that 
-
-
-## Release License
+## License & Disclaimers
 ```
 The MIT License (MIT)
 
