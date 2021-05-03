@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Input, Header, Grid, Card, Label, Icon } from 'semantic-ui-react';
+import { Container, Header, Grid, Card, Label, Icon } from 'semantic-ui-react';
 
 const Dashboard = () => {
 
