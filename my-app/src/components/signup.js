@@ -27,7 +27,7 @@ const Login = () => {
     //     })
     // }
         return (
-            <form>
+            <form className="inner">
 
                 <h3>Sign Up</h3>
 

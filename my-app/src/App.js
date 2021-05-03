@@ -4,12 +4,11 @@ import Login from "./components/login.js";
 import SignUp from "./components/signup.js";
 import Welcome from "./components/welcome.js";
 import { auth } from "./firebase";
-
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap'
 import { useEffect, useState } from 'react';
 import FileUpload from './components/upload';
 import Profile from './components/profile';
+import Dashboard from "./components/dashboard.js";
 
 
 function App() {
@@ -43,7 +42,10 @@ function App() {
                   <Link to={"/upload"} className="nav-link">Add Post</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to={"/profile"} className="nav-link">Profile</Link>
+                  <Link className="nav-link" to={"/dashboard"}>Public Posts</Link>
+                </li>
+                <li className="nav-item">
+                  <Link to={"/profile"} className="nav-link">Your Posts</Link>
                 </li>
                 <li className="nav-item">
                   <Link onClick={() => auth.signOut()} className="nav-link" >Sign out</Link>
@@ -83,6 +85,7 @@ function App() {
               <Route path="/profile" >
                 <Profile user={user}/>
               </Route>
+              <Route path="/dashboard" component={Dashboard}/>
             </Switch>
             :
             //paths allowed when users are not logged in
@@ -92,7 +95,6 @@ function App() {
               <Route path="/sign-up" component={SignUp} />
             </Switch>
           }
-
         </div>
       </div></Router>
   );

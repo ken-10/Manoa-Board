@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { render } from "react-dom";
+import React, {useEffect, useState} from 'react';
 import {database} from "../firebase";
 import Gallery from './gallery';
 
-const Profile = (props) => {
-  const postsRef = database.ref('posts').orderByChild('authorUid').equalTo(props.user.uid);
+const Dashboard = () => {
+  const postsRef = database.ref('posts').orderByChild('submittedDate');
   const [posts, setPosts] = useState(null);
   useEffect(() => {
     postsRef.on('value', (snapshot) => {
@@ -28,10 +27,10 @@ const Profile = (props) => {
   }, []) 
   return !posts ? null : (
     <div >
-      <h1 style={{textAlign: 'center'}}>Your Posts</h1>
+      <h1 style={{textAlign: 'center'}}>Public Posts</h1>
       <Gallery data={posts}/>
     </div>
   );
 }
 
-export default Profile;
+export default Dashboard;

@@ -61,7 +61,6 @@ const imgUrls = ['https://source.unsplash.com/PC_lbSSxCZE/800x600','https://sour
 const Gallery = (props) => {
   const [currentIndex, setCurrentIndex] = useState(null);
   const renderImageContent = (post, index) => {
-    console.log(post)
     return (
       <div  onClick={(e) => openModal(e, index)}>
         <img src={post.image} key={0} alt=""/>
@@ -105,7 +104,7 @@ const Gallery = (props) => {
         findNext={findNext} 
         hasPrev={currentIndex > 0} 
         hasNext={currentIndex + 1 < imgUrls.length} 
-        src={imgUrls[currentIndex]} 
+        src={props.data[currentIndex]} 
       /> */}
     </div>
   );

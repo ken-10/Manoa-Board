@@ -1,5 +1,7 @@
 import React, {useRef} from "react";
 import { auth } from "../firebase";
+import { Form, FormControl, Button } from 'react-bootstrap'
+
 
 const Login = () => {
     const emailRef = useRef(null);
@@ -28,7 +30,7 @@ const Login = () => {
         })
     }
         return (
-            <form>
+            <form className="inner">
 
                 <h3>Log in</h3>
 

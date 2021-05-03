@@ -25,10 +25,10 @@ body, html, .App, #root, .outer {
 
 .outer {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
   text-align: left;
-  margin-top: 225px;
+  margin-top: 65px;
 }
 
 .inner {

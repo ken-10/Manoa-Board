@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {storage, database} from "../firebase";
+import { ProgressBar } from 'react-bootstrap'
 
 const FileUpload = (props) => {
     const [image, setImage] = useState(null);
@@ -67,16 +68,17 @@ const FileUpload = (props) => {
 
 
     return (
-        <div>
-            <progress value={progress} max="100" />
-            <br />
+        <div className="inner">
+                <h1 style={{textAlign: 'center'}}>Add Post</h1>
             <br />
             <input type="file" onChange={handleChange} />
+            <br />
+            <br />
             <button onClick={handleUpload}>Upload</button>
-            <br />
+            <img style={{maxWidth:340, maxHeight:340}} src={url || "http://via.placeholder.com/300"} alt="firebase-image" />
+            <ProgressBar now={progress} label={`${progress}%`}/>
             {url}
-            <br />
-            <img style={{maxWidth:300, maxHeight:300}} src={url || "http://via.placeholder.com/300"} alt="firebase-image" />
+            
         </div>
     );
 }
