@@ -1,8 +1,17 @@
-## Welcome to GitHub Pages
+## Welcome to Manoa Board!
 
-You can use the [editor on GitHub](https://github.com/ken-10/Manoa-Board/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Manoa Board is a photo sharing application inspired by Instagram for University of Hawaii students. Users may create personal accounts and share photo(s) of their choice publicly for other users to view. This application was designed in hopes to connect students during the pandemic.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Meet the Team
+- **[Matthew Kim](https://github.com/mattkim009)**
+- **[Jiaying Feng](https://github.com/JiayingFeng)**
+- **[Qiqing Luo](https://github.com/QiQing-Luo)**
+- **[Ken Tung](https://github.com/ken-10)**
+
+## User Guide
+1. 
+
+
 
 ### Markdown
 
