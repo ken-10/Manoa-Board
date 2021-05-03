@@ -1,5 +1,7 @@
 ## Welcome to Manoa Board!
 
+
+
 Manoa Board is a photo sharing application inspired by Instagram for University of Hawaii students. Users may create personal accounts and share photo(s) of their choice publicly for other users to view. This application was designed in hopes to connect students during the pandemic.
 
 ## Meet the Team
