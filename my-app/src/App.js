@@ -78,7 +78,7 @@ function App() {
           {user ?
             // paths allowed when users are logged in
             <Switch>
-              <Route exact path='/' component={Welcome} />
+              <Route exact path='/' component={Dashboard} />
               <Route path="/upload" >
                 <FileUpload user={user}/>
               </Route>
@@ -90,7 +90,7 @@ function App() {
             :
             //paths allowed when users are not logged in
             <Switch>
-              <Route exact path='/' component={Login} />
+              <Route exact path='/' component={Welcome} />
               <Route path="/sign-in" component={Login} />
               <Route path="/sign-up" component={SignUp} />
             </Switch>
