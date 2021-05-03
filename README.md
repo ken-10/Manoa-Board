@@ -32,7 +32,6 @@
     - Created Navigation Bar
     - Implemented Authentication
     - Application tracks authentication status
+    - Github Wiki (https://ken-10.github.io/Manoa-Board/)
   - Current
-    - Create dashboard
-    - Create database to store user content
   - Next
